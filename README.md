@@ -4,9 +4,11 @@ This project is a to build a Neural Network from scratch using Numpy only (No py
 
 ## Architecture
 
-Two major functions in the NeuralNetwork class are fit and predict.
+The model is first constructed by adding layers and setting hyperparameters. Two major functions in the NeuralNetwork class are fit and predict.
 
-The steps in the fit function are preprare data, initialize neural network (weights, etc), repeat the following step for a number of epochs: loop through all data points and compute cost and gradients, use gradient descent algorithm to update the weights (coefficients) by using the gradients computed. Computing cost and gradients involves forward propagation, compute cost, backward propagation. Regularziation is also factored into the cost and gradient computation.
+The steps in the fit function are "preprare data", "initialize neural network" (weights, etc), and "train the model" by repeating the following step for a number of epochs: 
+
+loop through all data points and for a single data point, compute the cost and gradients, accumulate the costs and gradients for all data points for each layer, and then use gradient descent algorithm to use the accumulated gradients to update the weights (coefficients) for each layer. Computing cost and gradients involves forward propagation, compute cost, backward propagation. Regularziation is also factored into the cost and gradients computation for all layers.
 
 Predict function uses forward progagation to perform prediction.
 
